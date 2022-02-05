@@ -11,7 +11,7 @@ import CategoriesPage from './Pages/CategoriesPage/CategoriesPage';
 import ProductPage from './Pages/ProductPage/ProductPage';
 import LoginPage from './Pages/LoginPage/LoginPage';
 import RegisterPage from "./Pages/RegisterPage/RegisterPage";
-import Cart from "./Pages/Cart/Cart"
+import Cart from "./Pages/CartPage/Cart"
 import PaymentPage from "./Pages/PaymentPage/PaymentPage";
 
 import {Route,Switch,Redirect} from "react-router-dom";
