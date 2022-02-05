@@ -1,0 +1,31 @@
+.CartHeader{
+    padding:1rem;
+}
+
+h2{
+    text-transform: uppercase;
+}
+
+.CartHeaderNav{
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    text-transform: uppercase;
+}
+
+.CartNav{
+    padding:.5rem;
+    font-size: 1.3rem;
+}
+
+.ContinueShoppingContainer{
+    border:1px solid black;
+    box-shadow: .2rem .2rem .2rem rgba(0, 0, 0, 0.699);
+}
+
+.CheckOutNowContainer{
+    color:white;
+    background-color:rgba(0, 0, 0, 0.849);
+    border:1px solid black;
+    box-shadow: .2rem .2rem .2rem rgba(0, 0, 0, 0.5);
+}

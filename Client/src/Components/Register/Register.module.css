@@ -1,0 +1,31 @@
+.RegisterContainer{
+    width: 40rem;
+    padding: 2rem;
+    background-color: white;
+    box-shadow: 0rem 0rem 3.5rem rgba(0, 0, 0, 0.089);
+    border-radius: 1rem;
+}
+
+form{
+    text-align: start;
+}
+
+form > *{
+    margin-bottom: 2rem;
+}
+
+.Header{
+    font-size: 3rem;
+    font-weight: 200;
+    text-transform: uppercase;
+}
+
+.LoginButton{
+    padding: 1rem 3rem;
+    background-color: #313131;
+    color: white;
+    border:none;
+    outline: none;
+    cursor: pointer;
+}
+

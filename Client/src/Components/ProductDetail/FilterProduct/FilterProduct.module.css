@@ -1,0 +1,24 @@
+.FilterProduct{
+    display: flex;
+    align-items: center;
+}
+
+.FilterProduct > * {
+    margin-right: 2rem;
+}
+
+.ProductColor{
+    display: flex;
+}
+
+.ProductColor > * {
+    cursor: pointer;
+}
+
+.FilterProduct label{
+    margin-right: 1rem;
+    font-weight: inherit;
+}
+
+
+

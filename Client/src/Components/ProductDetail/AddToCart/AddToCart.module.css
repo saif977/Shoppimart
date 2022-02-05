@@ -1,0 +1,34 @@
+.AddToCartContainer{
+    display: flex;
+    align-items: center;
+}
+
+.AddToCartContainer > * {
+    margin-right: 1.5rem;
+}
+
+.AddToCartCountController{
+    font-weight: 500;
+    font-size: 2.2rem;
+    padding: .6rem;
+    cursor: pointer;
+}
+
+.AddToCartCount{
+    padding:.5rem 1rem;
+    border:1px solid greenyellow;
+    margin: 0rem 0rem;
+    font-size: 2rem;
+}
+
+.AddToCartButton button{
+    margin-left: 1.5rem;
+    padding: 1rem;
+    background-color: rgb(255, 255, 255);
+    border: 2px solid greenyellow;
+    cursor: pointer;
+}
+
+.AddToCartButton button:hover{
+    background-color: rgb(224, 224, 224);
+}

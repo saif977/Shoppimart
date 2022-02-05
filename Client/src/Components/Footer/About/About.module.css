@@ -1,0 +1,43 @@
+
+.About{
+    flex:1;
+    width:100%;
+    padding:1rem;
+ 
+}
+
+.About h2, .About p, .About .socialMediaHandlers{
+    margin-top: 2rem;
+}
+
+.About p{
+    text-align: left;
+}
+
+.socialMediaHandlers{
+    display: flex;
+    justify-content: start;
+    font-size: 1.4rem;
+}
+
+.socialMediaHandlers > *{
+    border-radius: 50%;
+    padding:.6rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 1.5rem;
+    cursor: pointer;
+}
+
+.facebookHandler{
+    background-color: rgb(59,89,152);
+}
+
+.instagramHandler{
+    background-color: rgb(228,68,88);
+}
+
+.twitterHandler{
+    background-color: rgb(85,172,238);
+}

@@ -1,0 +1,22 @@
+.ContactUs{
+    flex:1;
+    width:100%;
+    padding:1rem;
+}
+
+.ContactUs > *{
+    margin-top: 2rem;
+}
+
+.ContactUs ul{
+    list-style-type: none;
+}
+
+.ContactUs ul div{
+    display: flex;
+    margin-top: 1rem;
+}
+
+.ContactUs ul div span{
+    margin-right: 1.5rem;
+}

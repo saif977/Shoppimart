@@ -1,0 +1,24 @@
+.CategoryItem{
+    width:100%;
+    height:100%;
+    flex:1;
+    position: relative;
+    margin: 5px;
+}
+
+.ImageContainer{
+    width: 100%;
+    height: 100%;
+    background-color: rgb(173, 173, 173);
+}
+
+.InfoContainer{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top:0;
+}

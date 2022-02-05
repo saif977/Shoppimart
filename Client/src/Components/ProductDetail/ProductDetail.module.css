@@ -1,0 +1,41 @@
+.SingleProductContainer{
+    width: 100%;
+    height:70vh;
+    padding: 1rem;
+    display: flex;
+}
+
+.ProductImageContainer{
+    width:100%;
+    height:100%;
+    flex:1;
+}
+
+.ProductImage{
+    width: 100%;
+    height: 100%;
+    background-color: rgb(172, 172, 172);
+}
+
+.ProductInfoContainer{
+    width:100%;
+    height:100%;
+    flex:1;
+    padding:0rem 3rem;
+    text-align: start;
+}
+
+.ProductInfoContainer > *{
+    margin-top: 2rem;
+}
+
+.ProductName{
+    font-size: 2.5rem;
+    font-weight: 400;
+}
+
+.ProductPrice{
+    font-size: 2rem;
+    font-weight: 400;
+}
+

@@ -1,0 +1,33 @@
+.CartSummary{
+    padding:1rem;
+    box-shadow: 0rem 0rem .4rem rgba(0, 0, 0, 0.26);
+    background: white;
+}
+
+h3{
+    text-transform: uppercase;
+    padding:1rem;
+    margin-bottom: .5rem;
+}
+
+.Sub{
+    display: flex;
+    margin:1rem;
+    justify-content: space-between;
+    text-transform: capitalize;
+}
+
+.Total{
+    font-weight: 700;
+}
+
+.CheckOutNow{
+    width:100%;
+    padding: 1rem;
+    background: black;
+    color: white;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    text-transform: uppercase;
+}

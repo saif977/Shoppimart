@@ -1,0 +1,60 @@
+.Container{
+    height:6rem;
+}
+
+.Wrapper{
+    padding: 1rem 2rem;
+    display: flex;
+    flex-flow: row nowrap;
+}
+
+.Left{
+    flex:1;
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+}
+
+.Center{
+    flex: 1;
+}
+
+.Right{
+    flex:1;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-end;
+    font-weight: 200;
+}
+
+.Auth{
+    padding:0rem 1.5rem;
+    cursor: pointer;
+}
+
+.Cart{
+    padding-left: 1.5rem;
+    cursor: pointer;
+}
+
+.Language{
+    
+}
+
+.SearchContainer{
+    border: .5px solid gray;
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    padding: 5px;
+}
+
+.inputSearch{
+    outline: none;
+    border:none;
+}
+
+a{
+    text-decoration: none;
+    color: black;
+}

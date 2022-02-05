@@ -1,0 +1,46 @@
+.ProductContainer{
+    width:100%;
+    height:50vh;
+    background-color: rgb(212, 212, 212);
+    position: relative;
+}
+
+.HoverModal{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top:0;
+    left:0;
+    background-color: rgba(0, 0, 0, 0.192);
+    box-shadow: 1rem 2rem 2rem rgba(0, 0, 0, 0.24);
+    transform: scale(0);
+    transition: 0s all ease-in-out;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content:  center;
+    align-items: center;
+}
+
+.ProductContainer:hover .HoverModal{
+ transform: scale(1);   
+}
+
+.HoverModal_options_Container{
+    display: flex;
+    width: 100%;
+    flex-flow: row nowrap;
+    justify-content: center;
+}
+
+.HoverModal_options{
+    padding: 3rem;
+    border-radius: 50%;
+    background-color: rgb(255, 255, 255);
+    margin: 0 1rem;
+    transition: .2s all ease-in-out;
+    cursor: pointer;
+}
+
+.HoverModal_options:hover{
+    transform: scale(1.1);
+}

@@ -1,0 +1,76 @@
+.CartItem{
+    box-shadow:0rem .2rem .5rem rgba(0, 0, 0, 0.288);
+}
+
+.CartItemContainer{
+    display: flex;
+    flex-flow: row nowrap;
+}
+
+.CartItemContainer > *{
+    margin:1rem;
+}
+
+.ItemImageContainer{
+    width:15rem;
+    height:15rem;
+    background-color: rgba(0, 0, 0, 0.192);
+}
+
+.ItemDetailsContainer{
+    flex:3 1 auto;
+    display: flex;
+    flex-flow: row nowrap;
+}
+
+.ItemDetailsLeftContainer{
+    flex:2 1 auto;
+    /* background-color: rgba(0, 0, 0, 0.411); */
+    text-align: left;
+    margin-right:2rem;
+}
+
+.ItemDetailsRightContainer{
+    flex:1 1 auto;
+    /* background-color: rgba(0, 0, 0, 0.082); */
+}
+
+.ItemDetailsLeft > *{
+    margin:1.2rem .5rem;
+}
+
+.ItemSpecsKey{
+    text-transform: capitalize;
+    font-weight:600;
+}
+
+.ItemDetailsRight{
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-evenly;
+    align-items: center;
+    width:100%;
+    height:100%;
+}
+
+.ItemQuantity> *{
+    margin:0rem .5rem;
+    cursor: pointer;
+    font-size:2rem;
+}
+
+.IncreaseQuantity, .DecreaseQuantity{
+    font-size:2.5rem;
+}
+
+.Quantity{
+    border:1px solid green;
+    padding:1rem;
+}
+
+.RemoveItem{
+    cursor: pointer;
+    border:2px solid rgb(255, 4, 4);;
+    padding:1rem;
+    background:rgba(204, 84, 84, 0.623);
+}
