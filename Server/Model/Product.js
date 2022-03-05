@@ -1,34 +1,41 @@
-const mongoose=require("mongoose");
+const mongoose = require("mongoose");
 
-const Schema=mongoose.Schema;
+const Schema = mongoose.Schema;
 
-const productSchema=new Schema({
-    title:{
-        type:String,
-        required:[true,"enter product title"]
+const productSchema = new Schema(
+  {
+    imgURL: {
+      type: String,
+      required: [true, "enter image url"],
     },
-    desc:{
-        type:String,
-        required:[true,"enter product description"] 
+    title: {
+      type: String,
+      required: [true, "enter product title"],
     },
-    price:{
-        type:Number,
-        required:[true,"enter product price"]
+    desc: {
+      type: String,
+      required: [true, "enter product description"],
     },
-    categories:{
-        type:Array,
-        required:[true,"enter product categories"]
+    price: {
+      type: Number,
+      required: [true, "enter product price"],
     },
-    size:{
-        type:Array,
-        required:[true,"enter product size"]
+    categories: {
+      type: Array,
+      required: [true, "enter product categories"],
     },
-    color:{
-        type:Array,
-        required:[true,"enter product color"]
-    }  
-},{timestamps:true});
+    size: {
+      type: Array,
+      required: [true, "enter product size"],
+    },
+    color: {
+      type: Array,
+      required: [true, "enter product color"],
+    },
+  },
+  { timestamps: true }
+);
 
-const productModel=mongoose.model("products",productSchema);
+const productModel = mongoose.model("products", productSchema);
 
-module.exports=productModel;
+module.exports = productModel;

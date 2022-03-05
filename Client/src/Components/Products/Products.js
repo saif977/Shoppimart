@@ -61,7 +61,7 @@ const Products=({cat,filters,sort})=>{
     //console.log(products,filteredProducts,filters,sort);
     let prods="";
     prods=filters===""&&sort===""?products:filteredProducts;
-    prods=prods===null?<Loader/>:prods.map(product=><Product key={product._id} productId={product._id} />)
+    prods=prods===null?<Loader/>:prods.map(product=><Product key={product._id} productId={product._id} imgURL={product.imgURL} />)
     console.log(prods);
 
     return(

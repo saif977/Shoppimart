@@ -45,7 +45,8 @@ function CartItem({ productId, productColor, productSize, productQuantity }) {
                     {productSize}
                   </div>
                   <div className={classes.ItemPrice}>
-                    <span className={classes.ItemSpecsKey}>price:</span> ${product.price}
+                    <span className={classes.ItemSpecsKey}>price:</span> $
+                    {product.price}
                   </div>
                 </div>
               </div>

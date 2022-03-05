@@ -2,8 +2,8 @@ const Product=require("../Model/Product");
 
 exports.postAddProduct=async (req,res,next)=>{
     try{
-        const {title,desc,price,categories,size,color}=req.body;
-        const product=await Product.create({title,desc,price,categories,size,color});
+        const {imgURL,title,desc,price,categories,size,color}=req.body;
+        const product=await Product.create({imgURL,title,desc,price,categories,size,color});
         res.json(product);
     }
     catch(err){

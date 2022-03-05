@@ -8,7 +8,7 @@ const CategoryItem=(props)=>{
     return(
         <div className={classes.CategoryItem}>
            <div className={classes.ImageContainer}>
-               <img src={props.item.imgURL} />
+               <img src={props.item.imgURL} className={classes.Image} />
            </div>
            <Link to={`/get-products/?categories=${props.item.categories}`}>
            <div className={classes.InfoContainer}>

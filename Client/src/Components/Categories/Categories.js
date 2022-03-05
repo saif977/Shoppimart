@@ -2,7 +2,7 @@ import React from "react";
 import classes from "./Categories.module.css";
 
 import CategoryItem from "./CategoryItem/CategoryItem";
-import data from "../Slider/data";
+import data from "./categoriesData";
 
 import {Link} from "react-router-dom";
 
