@@ -3,7 +3,7 @@ import classes from "./CartItem.module.css";
 
 import axios from "../../../axiosInstance";
 
-function CartItem({ productId, productColor, productSize, productQuantity }) {
+function CartItem({ productId, productColor, productSize, productQuantity, deleteProductFromCart }) {
   const [product, setProduct] = useState(null);
   useEffect(() => {
     const fetchProduct = async () => {
@@ -20,6 +20,8 @@ function CartItem({ productId, productColor, productSize, productQuantity }) {
     };
     fetchProduct();
   }, []);
+
+  
 
   return (
     <div className={classes.CartItem}>
@@ -57,7 +59,7 @@ function CartItem({ productId, productColor, productSize, productQuantity }) {
                     <span className={classes.Quantity}>{productQuantity}</span>{" "}
                     <span className={classes.DecreaseQuantity}>-</span>
                   </div>
-                  <div className={classes.RemoveItemContainer}>
+                  <div className={classes.RemoveItemContainer} onClick={()=>{deleteProductFromCart(productId);}} >
                     <div className={classes.RemoveItem}>remove item</div>
                   </div>
                 </div>

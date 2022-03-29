@@ -53,13 +53,14 @@ const SingleProduct = () => {
     if (user) {
       try {
         const res = await axios.post(`/add-to-cart/`, {
-          userId: user._id,
-          productId,
-          color,
-          size,
-          quantity,
-          token
-        });
+            userId: user._id,
+            productId,
+            color,
+            size,
+            quantity
+        }, {headers:{
+          authorization:`bearer ${token}`
+        }});
         console.log(res);
       } catch (err) {}
     } else {

@@ -13,6 +13,8 @@ import { useSelector, useDispatch } from "react-redux";
 
 function Cart() {
   const [cartProducts, setCartProducts] = useState(null);
+  const [updatedCartProducts, setUpdatedCartProducts] = useState(null);
+  const [cartLoading,setCartLoading]=useState(false);
   const user = useSelector((state) => state.userState.user);
   const token = localStorage.getItem("token");
 
@@ -27,11 +29,13 @@ function Cart() {
       try {
         console.log(token);
         let fetchedCartProducts = await axios.get(`/get-cart/${user._id}`, {
-          params: { token },
+          headers:{
+            authorization:`bearer ${token}`
+          }
         });
         fetchedCartProducts = fetchedCartProducts.data;
-        if (cartProducts === fetchedCartProducts) return;
         setCartProducts(fetchedCartProducts);
+        setCartLoading(false);
         console.log(fetchedCartProducts);
       } catch (err) {
         console.log(err);
@@ -39,9 +43,24 @@ function Cart() {
     };
     fetchCartProducts();
     console.log("use");
-  }, []);
+  }, [updatedCartProducts]);
+
+  const deleteProductFromCart=async (productId=null,userId=user?user._id:null)=>{
+    let uptCartPrdcts=await axios.delete(`/delete-product-cart/?userId=${userId}&productId=${productId}`,{
+      headers:{
+        authorization:`bearer ${token}`
+      }
+    });
+    uptCartPrdcts=uptCartPrdcts.data.items;
+    console.log(uptCartPrdcts);
+    setUpdatedCartProducts(uptCartPrdcts);
+    setCartLoading(true);
+    setCartProducts(false);
+  }
+
 
   const cartItems =
+  cartLoading?<div>Loading</div>:
     cartProducts && cartProducts.cart !== null ? (
       cartProducts.cart.items.map((item) => {
         return (
@@ -50,12 +69,15 @@ function Cart() {
             productColor={item.color}
             productSize={item.size}
             productQuantity={item.quantity}
+            deleteProductFromCart={deleteProductFromCart}
           />
         );
       })
     ) : (
       <div>Cart is Empty</div>
     );
+
+
 
   return (
     <div>

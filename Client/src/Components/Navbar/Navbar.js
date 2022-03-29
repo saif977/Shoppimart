@@ -55,7 +55,11 @@ const Navbar = () => {
         {
           dispatch(userActions.fetchUserRequest());
           const usr = await axios.get(
-            `/authenticate/${token !== null ? token : null}`
+            `/authenticate/${token !== null ? token : null}`,{
+              headers:{
+                Authorization:`Bearer ${token}`
+              }
+            }
           );
           setUserAuth(true);
           dispatch(userActions.fetchUserSuccess(usr.data.user)); 

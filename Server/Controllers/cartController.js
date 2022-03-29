@@ -30,6 +30,7 @@ exports.getCarts=async (req,res,next)=>{
 
 exports.postAddToCart=async (req,res,next)=>{
     try{
+        console.log(req.body);
         const {userId,productId,color,size,quantity}=req.body;
         const user=await User.findById(userId);  // to check if the user exists
         if(!user)
@@ -74,7 +75,10 @@ exports.deleteProductFromCart=async (req,res,next)=>{
     try
     {
 
-        const {userId,productId}=req.body;
+        const userId=req.query.userId;
+        const productId=req.query.productId;
+        console.log(req.query,"query");
+        //console.log(JSON.parse(req.headers.data));
         let cart=await Cart.findOne({userId});
         if(!cart)
         res.json("no cart found");
@@ -84,7 +88,9 @@ exports.deleteProductFromCart=async (req,res,next)=>{
         });
         if(productIndex===-1)
         res.json("product not found");
+        console.log(productIndex,"prod index");
         updatedItems=updatedItems.filter(product=>product.productId.toString()!==productId);
+        console.log(updatedItems);
         cart=await Cart.findByIdAndUpdate(cart._id,{$set:{items:updatedItems}},{new:true});
         res.json(cart);
     }

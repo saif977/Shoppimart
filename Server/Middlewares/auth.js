@@ -42,8 +42,10 @@ const verifyJwtToken=(req,res,next)=>{
 
 const verifyJwtToken2=(req,res,next)=>{
    // const jwtToken=getJwtTokenFromCookie(req.headers.cookie);
-
-   const jwtToken=req.body.token||req.query.token||req.params.jwtToken;
+   console.log(req.headers,"auth headers");
+   const jwtToken=req.headers.authorization.split(' ')[1];
+   //console.log(req.headers.authorization===null)
+  // const jwtToken=req.body.token||req.query.token||req.params.jwtToken;
    console.log(jwtToken,"jwt")
     if(jwtToken==="null")
     {
