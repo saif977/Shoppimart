@@ -22,8 +22,8 @@ router.get("/get-users",auth.authorizeAdmin,userController.getUsers);
 // })
 router.post("/signup",userController.postSignUp);
 router.post("/login",userController.postLogin);
-
-
+router.post("/get-otp",userController.postGetOtp)
+router.put("/reset-password",userController.putResetPassword)
 
 //------------- Product routes --------------
 router.get("/get-product/:id",productController.getProduct);

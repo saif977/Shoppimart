@@ -2,12 +2,12 @@ import React, { useState } from "react";
 import classes from "./Login.module.css";
 
 import Input from "../UI/Input/Input";
-import Link from "../Link/Link";
+import MyLink from "../MyLink/MyLink";
 import ErrorComponent from "../UI/ErrorComponent/ErrorComponent";
 
 import { loginUser } from "../../redux/user/UserActions";
 import { useSelector, useDispatch } from "react-redux";
-import { Redirect } from "react-router-dom";
+import { Redirect} from "react-router-dom";
 
 const Login = ({ login }) => {
   const [userEmail, setUserEmail] = useState("");
@@ -86,8 +86,8 @@ const Login = ({ login }) => {
           >
             login
           </button>
-          <Link>forget password?</Link>
-          <Link>create new account</Link>
+          <MyLink to="/forget-password" >forget password?</MyLink>
+          <MyLink to="/signup" >create new account</MyLink>
         </form>
       )}
     </div>

@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import classes from "./Register.module.css";
 
 import Input from "../UI/Input/Input";
-import Link from "../Link/Link";
 
 import { useSelector, useDispatch } from "react-redux";
 import ErrorComponent from "../UI/ErrorComponent/ErrorComponent";

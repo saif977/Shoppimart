@@ -12,21 +12,6 @@ const Input = (props) => {
       }}
     />
   );
-  // switch(props.inputtype){
-  //     case 'text' : {
-  //         InputElement=<input {...props} className={classes.InputName} />
-  //         break;
-  //     }
-  //     case  'email' : {
-  //         InputElement=<input {...props} className={classes.InputEmail} />
-  //         break;
-  //     }
-  //     case 'password' : {
-  //         InputElement=<input {...props} className={classes.InputPassword} />
-  //         break;
-  //     }
-  //     default : break;
-  // }
   return <div className={classes.InputContainer}>{InputElement}</div>;
 };
 

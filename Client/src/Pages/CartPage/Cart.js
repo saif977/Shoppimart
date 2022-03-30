@@ -14,7 +14,7 @@ import { useSelector, useDispatch } from "react-redux";
 function Cart() {
   const [cartProducts, setCartProducts] = useState(null);
   const [updatedCartProducts, setUpdatedCartProducts] = useState(null);
-  const [cartLoading,setCartLoading]=useState(false);
+  const [cartLoading, setCartLoading] = useState(false);
   const user = useSelector((state) => state.userState.user);
   const token = localStorage.getItem("token");
 
@@ -29,9 +29,9 @@ function Cart() {
       try {
         console.log(token);
         let fetchedCartProducts = await axios.get(`/get-cart/${user._id}`, {
-          headers:{
-            authorization:`bearer ${token}`
-          }
+          headers: {
+            authorization: `bearer ${token}`,
+          },
         });
         fetchedCartProducts = fetchedCartProducts.data;
         setCartProducts(fetchedCartProducts);
@@ -45,39 +45,42 @@ function Cart() {
     console.log("use");
   }, [updatedCartProducts]);
 
-  const deleteProductFromCart=async (productId=null,userId=user?user._id:null)=>{
-    let uptCartPrdcts=await axios.delete(`/delete-product-cart/?userId=${userId}&productId=${productId}`,{
-      headers:{
-        authorization:`bearer ${token}`
+  const deleteProductFromCart = async (
+    productId = null,
+    userId = user ? user._id : null
+  ) => {
+    let uptCartPrdcts = await axios.delete(
+      `/delete-product-cart/?userId=${userId}&productId=${productId}`,
+      {
+        headers: {
+          authorization: `bearer ${token}`,
+        },
       }
-    });
-    uptCartPrdcts=uptCartPrdcts.data.items;
+    );
+    uptCartPrdcts = uptCartPrdcts.data.items;
     console.log(uptCartPrdcts);
     setUpdatedCartProducts(uptCartPrdcts);
     setCartLoading(true);
     setCartProducts(false);
-  }
+  };
 
-
-  const cartItems =
-  cartLoading?<div>Loading</div>:
-    cartProducts && cartProducts.cart !== null ? (
-      cartProducts.cart.items.map((item) => {
-        return (
-          <CartItem
-            productId={item.productId}
-            productColor={item.color}
-            productSize={item.size}
-            productQuantity={item.quantity}
-            deleteProductFromCart={deleteProductFromCart}
-          />
-        );
-      })
-    ) : (
-      <div>Cart is Empty</div>
-    );
-
-
+  const cartItems = cartLoading ? (
+    <div>Loading</div>
+  ) : cartProducts && cartProducts.cart !== null ? (
+    cartProducts.cart.items.map((item) => {
+      return (
+        <CartItem
+          productId={item.productId}
+          productColor={item.color}
+          productSize={item.size}
+          productQuantity={item.quantity}
+          deleteProductFromCart={deleteProductFromCart}
+        />
+      );
+    })
+  ) : (
+    <div>Cart is Empty</div>
+  );
 
   return (
     <div>
