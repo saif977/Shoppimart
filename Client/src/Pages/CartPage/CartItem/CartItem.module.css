@@ -17,6 +17,10 @@
     height:15rem;
 }
 
+.ItemImage{
+    height:100%;
+}
+
 .ItemImage > img{
     width: 100%;
     height: 100%;

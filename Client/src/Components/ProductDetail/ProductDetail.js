@@ -16,6 +16,7 @@ const SingleProduct = () => {
   const uh = useHistory();
   const [color, setColor] = useState(null);
   const [size, setSize] = useState(null);
+  const [price,setPrice] =useState(null);
   const [quantity, setQuantity] = useState(1);
   const token = localStorage.getItem("token");
 
@@ -57,6 +58,7 @@ const SingleProduct = () => {
             productId,
             color,
             size,
+            price,
             quantity
         }, {headers:{
           authorization:`bearer ${token}`
@@ -85,6 +87,7 @@ const SingleProduct = () => {
           setProduct(fetchedProduct);
           setColor(fetchedProduct.color[0]);
           setSize(fetchedProduct.size[0]);
+          setPrice(fetchedProduct.price)
         }
       } catch (err) {
         console.log(err);
@@ -102,7 +105,7 @@ const SingleProduct = () => {
           <div className={classes.SingleProductContainer}>
             <div className={classes.ProductImageContainer}>
               <div className={classes.ProductImage}>
-                <img src={product.imgURL} alt={product.title}/>
+                <img src={product.imgURL} alt={product.title} />
               </div>
             </div>
             <div className={classes.ProductInfoContainer}>

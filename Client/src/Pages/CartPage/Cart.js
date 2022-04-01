@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useLayoutEffect } from "react";
+import React, { useState,useRef, useEffect, useLayoutEffect } from "react";
 import classes from "./Cart.module.css";
 
 import Navbar from "../../Components/Navbar/Navbar";
@@ -17,9 +17,9 @@ function Cart() {
   const [cartLoading, setCartLoading] = useState(false);
   const user = useSelector((state) => state.userState.user);
   const token = localStorage.getItem("token");
-
   const dispatch = useDispatch();
-
+  const totalCartPrice=useRef();
+  totalCartPrice.current=0;
   useEffect(() => {
     console.log(user);
     if (!user) {
@@ -45,6 +45,7 @@ function Cart() {
     console.log("use");
   }, [updatedCartProducts]);
 
+
   const deleteProductFromCart = async (
     productId = null,
     userId = user ? user._id : null
@@ -68,6 +69,8 @@ function Cart() {
     <div>Loading</div>
   ) : cartProducts && cartProducts.cart !== null ? (
     cartProducts.cart.items.map((item) => {
+      console.log(item.price,item.quantity)
+      totalCartPrice.current+=item.price*item.quantity;
       return (
         <CartItem
           productId={item.productId}
@@ -81,14 +84,15 @@ function Cart() {
   ) : (
     <div>Cart is Empty</div>
   );
-
+ 
+  console.log(totalCartPrice);
   return (
     <div>
       <Navbar />
       {user ? (
         <>
           <CartHeader />
-          <CartSummary />
+          <CartSummary totalCartPrice={totalCartPrice.current} />
           {cartItems}
           <Newsletter />
           <Footer />

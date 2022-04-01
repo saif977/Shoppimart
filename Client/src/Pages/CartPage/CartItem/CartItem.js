@@ -21,7 +21,6 @@ function CartItem({ productId, productColor, productSize, productQuantity, delet
     fetchProduct();
   }, []);
 
-  
 
   return (
     <div className={classes.CartItem}>

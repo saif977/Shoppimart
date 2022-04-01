@@ -11,6 +11,7 @@ import LoginPage from "./Pages/LoginPage/LoginPage";
 import RegisterPage from "./Pages/RegisterPage/RegisterPage";
 import Cart from "./Pages/CartPage/Cart";
 import PaymentPage from "./Pages/PaymentPage/PaymentPage";
+import TemporaryPage from "./Pages/PaymentPage/TemporaryPage"
 import ForgetPaswwordPage from "./Pages/ForgetPasswordPage/ForgetPasswordPage";
 import ForgetPasswordOtpPage from "./Pages/ForgetPasswordOtpPage/ForgetPasswordOtpPage"
 
@@ -32,6 +33,7 @@ const App = () => {
           <Route path="/forget-password" component={ForgetPaswwordPage} />
           <Route path="/forget-password-otp" component={ForgetPasswordOtpPage} />
           <Route path="/cart" component={Cart} />
+          <Route path="/checkout" component={TemporaryPage} />
         </Switch>
       </Provider>
     </div>

@@ -22,6 +22,10 @@ const cartSchema=new Schema({
                 type:String,
                 required:[true,"enter color"]
             },
+            price:{
+                type:Number,
+                required:[true,"enter price"]
+            },
             quantity:{
                 type:Number,
                 required:[true,"enter quantity"]

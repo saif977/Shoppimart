@@ -31,7 +31,7 @@ exports.getCarts=async (req,res,next)=>{
 exports.postAddToCart=async (req,res,next)=>{
     try{
         console.log(req.body);
-        const {userId,productId,color,size,quantity}=req.body;
+        const {userId,productId,color,size,price,quantity}=req.body;
         const user=await User.findById(userId);  // to check if the user exists
         if(!user)
         res.json("user doesnt exist");
@@ -55,6 +55,7 @@ exports.postAddToCart=async (req,res,next)=>{
                     productId,
                     color,
                     size,
+                    price,
                     quantity
                 });
             }
@@ -62,7 +63,7 @@ exports.postAddToCart=async (req,res,next)=>{
             res.json(updatedCart);
         }
         else{
-            const cart=await Cart.create({userId,items:[{productId,color,size,quantity}]});
+            const cart=await Cart.create({userId,items:[{productId,color,size,price,quantity}]});
             res.json(cart);
         }
     }
