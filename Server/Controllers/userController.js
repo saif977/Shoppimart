@@ -100,7 +100,7 @@ exports.postGetOtp = async (req, res, next) => {
   try {
     const { email } = req.body;
     const user = await User.findOne({ email });
-    if (!user) res.json({ user: null, message: "email not found" });
+    if (!user) res.json({ user: null, message: "user not registered" });
     const getOtp = createOtp();
     const expiresIn = createExpiry();
     console.log(getOtp,"otp ",expiresIn,"Expe")
