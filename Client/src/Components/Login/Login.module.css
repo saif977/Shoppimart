@@ -1,6 +1,7 @@
 .LoginContainer{
     width: 40rem;
     padding: 2rem;
+    font-size: 2rem;
     background-color: white;
     box-shadow: 0rem 0rem 3.5rem rgba(0, 0, 0, 0.089);
     border-radius: 1rem;
@@ -15,7 +16,6 @@ form > *{
 }
 
 .Header{
-    font-size: 3rem;
     font-weight: 200;
     text-transform: uppercase;
 }
@@ -27,5 +27,17 @@ form > *{
     border:none;
     outline: none;
     cursor: pointer;
+}
+
+@media only screen and (max-width:700px) {
+    .LoginContainer{
+        font-size: 1.5rem;
+    }   
+}
+
+@media only screen and (max-width:400px) {
+    .LoginContainer{
+        font-size: 1.2rem;
+    }   
 }
 

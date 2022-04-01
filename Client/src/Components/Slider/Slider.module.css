@@ -3,11 +3,10 @@
     max-width:100vw;
     position: relative;
     overflow: hidden;
-    background-color: aquamarine;
+    font-size: 1.5rem;
 }
 
 .Wrapper{
-    padding: 1rem;
     display: flex;
     flex-flow: row nowrap;
     position: absolute;
@@ -37,3 +36,4 @@
 .RightArrow{
     right: 2rem;
 }
+

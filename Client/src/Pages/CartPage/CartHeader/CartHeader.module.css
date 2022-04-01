@@ -1,5 +1,6 @@
 .CartHeader{
     padding:1rem;
+    font-size: 1.3rem;
 }
 
 h2{
@@ -15,7 +16,6 @@ h2{
 
 .CartNav{
     padding:.5rem;
-    font-size: 1.3rem;
 }
 
 .ContinueShoppingContainer{
@@ -28,4 +28,16 @@ h2{
     background-color:rgba(0, 0, 0, 0.849);
     border:1px solid black;
     box-shadow: .2rem .2rem .2rem rgba(0, 0, 0, 0.5);
+}
+
+@media  only screen and (max-width:700px) {
+    .CartHeader{
+        font-size: 1rem;
+    }
+}
+
+@media only screen and (max-width:400px) {
+    .CartHeader{
+        font-size: .8rem;
+    }
 }

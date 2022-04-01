@@ -4,6 +4,7 @@
     background-color: white;
     box-shadow: 0rem 0rem 3.5rem rgba(0, 0, 0, 0.089);
     border-radius: 1rem;
+    font-size: 2rem;
 }
 
 form{
@@ -15,12 +16,11 @@ form > *{
 }
 
 .Header{
-    font-size: 3rem;
     font-weight: 200;
     text-transform: uppercase;
 }
 
-.LoginButton{
+.RegisterButton{
     padding: 1rem 3rem;
     background-color: #313131;
     color: white;
@@ -28,4 +28,17 @@ form > *{
     outline: none;
     cursor: pointer;
 }
+
+@media only screen and (max-width:700px) {
+    .RegisterContainer{
+        font-size: 1.5rem;
+    }   
+}
+
+@media only screen and (max-width:400px) {
+    .RegisterContainer{
+        font-size: 1.2rem;
+    }   
+}
+
 

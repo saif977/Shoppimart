@@ -49,7 +49,7 @@
 
 .HoverModal_options{
     padding: 3rem;
-    border-radius: 50%;
+    border-radius: 5px;
     background-color: rgb(255, 255, 255);
     margin: 0 1rem;
     transition: .2s all ease-in-out;

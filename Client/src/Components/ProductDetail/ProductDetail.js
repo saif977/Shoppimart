@@ -101,7 +101,9 @@ const SingleProduct = () => {
         <Fragment>
           <div className={classes.SingleProductContainer}>
             <div className={classes.ProductImageContainer}>
-              <div className={classes.ProductImage}></div>
+              <div className={classes.ProductImage}>
+                <img src={product.imgURL} alt={product.title}/>
+              </div>
             </div>
             <div className={classes.ProductInfoContainer}>
               <div className={classes.ProductName}>

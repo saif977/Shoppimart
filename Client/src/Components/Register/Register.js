@@ -87,7 +87,7 @@ const Register = () => {
           />
           <ErrorComponent error={errorPassword} />
           <button
-            className={classes.LoginButton}
+            className={classes.RegisterButton}
             onClick={(e) => {
               e.preventDefault();
               !validateRegisterData()

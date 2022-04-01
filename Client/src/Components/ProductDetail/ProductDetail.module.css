@@ -1,6 +1,5 @@
 .SingleProductContainer{
     width: 100%;
-    height:70vh;
     padding: 1rem;
     display: flex;
 }
@@ -14,8 +13,15 @@
 .ProductImage{
     width: 100%;
     height: 100%;
-    background-color: rgb(172, 172, 172);
 }
+
+.ProductImage > img{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+
 
 .ProductInfoContainer{
     width:100%;
@@ -39,3 +45,8 @@
     font-weight: 400;
 }
 
+@media only screen and (max-width:700px) {
+    .SingleProductContainer{
+        display:block;
+    }
+}

@@ -23,10 +23,10 @@ const Product = ({ productId, imgURL }) => {
       </div>
       <div className={classes.HoverModal}>
         <div className={classes.HoverModal_options_Container}>
-          <div className={classes.HoverModal_options}></div>
-          <div className={classes.HoverModal_options}></div>
+          {/* <div className={classes.HoverModal_options}></div>
+          <div className={classes.HoverModal_options}></div> */}
           <Link to={`/get-product/${productId}`}>
-            <div className={classes.HoverModal_options}></div>
+            <div className={classes.HoverModal_options}>view</div>
           </Link>
         </div>
       </div>

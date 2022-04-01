@@ -35,7 +35,7 @@ const CategoriesPage=()=>{
     return (
         <Fragment>
             <Navbar />
-            <h1>{category}</h1>
+            <h1 className={classes.h1}>{category}</h1>
             <Filter changeFilter={(e)=>{changeFilterHandler(e)}} changeSort={(e)=>{changeSortHandler(e)}} />
             <Products cat={category} filters={filters} sort={sort} />
             <Footer />

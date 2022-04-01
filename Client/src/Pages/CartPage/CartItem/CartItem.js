@@ -29,7 +29,9 @@ function CartItem({ productId, productColor, productSize, productQuantity, delet
         {product ? (
           <>
             <div className={classes.ItemImageContainer}>
-              <div className={classes.ItemImage}></div>
+              <div className={classes.ItemImage}>
+                <img src={product.imgURL} />
+              </div>
             </div>
             <div className={classes.ItemDetailsContainer}>
               <div className={classes.ItemDetailsLeftContainer}>
@@ -55,9 +57,9 @@ function CartItem({ productId, productColor, productSize, productQuantity, delet
               <div className={classes.ItemDetailsRightContainer}>
                 <div className={classes.ItemDetailsRight}>
                   <div className={classes.ItemQuantity}>
-                    <span className={classes.IncreaseQuantity}>+</span>{" "}
+                    {/* <span className={classes.IncreaseQuantity}>+</span>{" "} */}
                     <span className={classes.Quantity}>{productQuantity}</span>{" "}
-                    <span className={classes.DecreaseQuantity}>-</span>
+                    {/* <span className={classes.DecreaseQuantity}>-</span> */}
                   </div>
                   <div className={classes.RemoveItemContainer} onClick={()=>{deleteProductFromCart(productId);}} >
                     <div className={classes.RemoveItem}>remove item</div>
